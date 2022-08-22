@@ -10,9 +10,7 @@ CREATE TABLE `ip2location` (
     `city_name`    varchar(128) NOT NULL,
     `latitude`     double NOT NULL,
     `longitude`    double NOT NULL,
-    PRIMARY KEY `idx_ip_from_to` (`ip_from`, `ip_to`),
-    INDEX `idx_ip_from` (`ip_from`),
-    INDEX `idx_ip_to` (`ip_to`)
-) ENGINE = MyISAM DEFAULT CHARSET = utf8 COLLATE = utf8_bin;
+    PRIMARY KEY `idx_ip_from_to` (`ip_from`, `ip_to`)
+) ENGINE = InnoDB DEFAULT CHARSET = utf8 COLLATE = utf8_bin;
 
 -- rollback drop table ip2location;
